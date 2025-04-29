@@ -1,8 +1,18 @@
+import Faq from "@/components/about/Faq";
+import Politicas from "@/components/about/Politicas"; // Import the Politicas component
+import Mision from "@/components/about/Mision"; // Import the Politicas component
+
+
 function About() {
     return (
-        <div>
-            <h1>About</h1>
-            <p>This is the about page.</p>
+        <div className="container mx-auto px-4 py-8 space-y-12">
+            
+            <Mision />
+
+            <Politicas />
+
+            <Faq heading="Preguntas Frecuentes" />
+
         </div>
     );
 }
