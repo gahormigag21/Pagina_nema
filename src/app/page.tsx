@@ -1,6 +1,6 @@
-import Features from "@/components/Layouts/Features";
-import Gallery from "@/components/Layouts/Gallery";
-import Hero from "@/components/Layouts/Hero";
+import Features from "@/components/Home/Features";
+import Gallery from "@/components/Home/Gallery";
+import Hero from "@/components/Home/Hero";
 
 export default function Home() {
   return (

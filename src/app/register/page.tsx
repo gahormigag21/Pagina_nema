@@ -1,7 +1,7 @@
 "use client";
 
 import { GalleryVerticalEnd } from "lucide-react";
-import { RegisterForm } from "@/components/authLayouts/register-form";
+import { RegisterForm } from "@/components/auth/register-form";
 import Image from "next/image";
 
 export default function RegisterPage() {
