@@ -1,4 +1,5 @@
 import Features from "@/components/Layouts/Features";
+import Gallery from "@/components/Layouts/Gallery";
 import Hero from "@/components/Layouts/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
+      <Gallery />
     </div>
   );
 }
