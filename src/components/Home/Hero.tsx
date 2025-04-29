@@ -80,7 +80,7 @@ const Hero = ({
         before:backdrop-blur-xs
         before:-z-1"
     >
-      <div className="container  mx-auto my-0">
+      <div className="container mx-auto my-0">
         <div className="flex flex-col items-center gap-8 md:flex-row">
           <div className="flex-1">
             <div className="flex flex-col gap-4 lg:gap-8">
