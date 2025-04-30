@@ -1,6 +1,7 @@
 import Faq from "@/components/about/Faq";
 import Politicas from "@/components/about/Politicas"; // Import the Politicas component
 import Mision from "@/components/about/Mision"; // Import the Politicas component
+import Valores from "@/components/about/Valores";
 
 
 function About() {
@@ -10,6 +11,8 @@ function About() {
             <Mision />
 
             <Politicas />
+
+            <Valores />
 
             <Faq heading="Preguntas Frecuentes" />
 
