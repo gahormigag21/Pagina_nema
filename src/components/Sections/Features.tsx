@@ -1,6 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { Layout, Pointer, Zap } from "lucide-react";
-
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +10,7 @@ interface TabContent {
   buttonText: string;
   imageSrc: string;
   imageAlt: string;
+  url?: string;
 }
 
 interface Tab {
@@ -21,49 +21,13 @@ interface Tab {
 }
 
 interface FeatureProps {
-  badge?: string;
-  heading?: string;
-  description?: string;
-  tabs?: Tab[];
+  badge: string;
+  heading: string;
+  description: string;
+  tabs: Tab[];
 }
 
-const Feature = ({
-  badge = "Certificaciones",
-  heading = "Comprometidos con la calidad y la mejora continua",
-  description = "Contamos con certificaciones que garantizan la calidad y seguridad de nuestros procesos.",
-  tabs = [
-    {
-      value: "tab-1",
-      icon: <Zap className="h-auto w-4 shrink-0" />,
-      label: "Certificado SGS",
-      content: {
-        badge: "certificaión ID: CO11/4112",
-        title: "ISO 9001:2015 Quality Management System Certification",
-        description:
-          "Construcción de obras civiles asociadas con la rehabilitación, mantenimiento y construción de redes de acueducto, alcantarillado y obras de infraestructura vial. Fabricación de accesorios para tuberias de acero utilizadas en el transporte de fluidos a presión con recubrimientos internos y externos en pintura epóxica o mortero de cemento",
-        buttonText: "Ver Certificado",
-        imageSrc:
-          "/images/SGS.png",
-        imageAlt: "placeholder",
-      },
-    },
-    {
-      value: "tab-2",
-      icon: <Pointer className="h-auto w-4 shrink-0" />,
-      label: "Higher Engagement",
-      content: {
-        badge: "Expert Features",
-        title: "Boost your site with top-tier design.",
-        description:
-          "Use stellar design to easily engage users and strengthen their loyalty. Create a seamless experience that keeps them coming back for more.",
-        buttonText: "See Tools",
-        imageSrc:
-          "https://shadcnblocks.com/images/block/placeholder-dark-2.svg",
-        imageAlt: "placeholder",
-      },
-    },
-  ],
-}: FeatureProps) => {
+const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
   return (
     <section className="py-16">
       <div className="container mx-auto">
@@ -105,19 +69,21 @@ const Feature = ({
                       {tab.content.description}
                     </p>
                     <Button className="mt-2.5 w-fit gap-2" size="lg">
-                      <a href="https://www.sgs.com/en-co/certified-clients-and-products/certified-client-directory">
+                      <a href={tab.content.url}>
                         {tab.content.buttonText}
                       </a>
                     </Button>
                   </div>
                   <div className="relative h-[300px] w-full lg:h-[400px]">
-                    <img
-                      src={tab.content.imageSrc}
-                      alt={tab.content.imageAlt}
-                      className="h-full w-full rounded-xl object-center object-contain"
-                      width={400}
-                      height={400}
-                    />
+                    <a href={tab.content.url} className="">
+                      <Image
+                        src={tab.content.imageSrc}
+                        alt={tab.content.imageAlt}
+                        className="h-full w-full rounded-xl object-center object-contain"
+                        width={400}
+                        height={400}
+                      />
+                    </a>
                   </div>
                 </TabsContent>
               ))}
