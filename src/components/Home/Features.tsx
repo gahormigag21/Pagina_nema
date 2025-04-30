@@ -37,13 +37,13 @@ const Feature = ({
       icon: <Zap className="h-auto w-4 shrink-0" />,
       label: "Certificado SGS",
       content: {
-        badge: "CO11/4112",
+        badge: "certificaión ID: CO11/4112",
         title: "ISO 9001:2015 Quality Management System Certification",
         description:
           "Construcción de obras civiles asociadas con la rehabilitación, mantenimiento y construción de redes de acueducto, alcantarillado y obras de infraestructura vial. Fabricación de accesorios para tuberias de acero utilizadas en el transporte de fluidos a presión con recubrimientos internos y externos en pintura epóxica o mortero de cemento",
         buttonText: "Ver Certificado",
         imageSrc:
-          "/images/SGS.webp",
+          "/images/SGS.png",
         imageAlt: "placeholder",
       },
     },
