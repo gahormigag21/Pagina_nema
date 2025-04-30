@@ -66,7 +66,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section
-      className="py-12 md:py-20 relative z-0
+      className="py-16 mb-10 md:py-20 relative z-0
         bg-[url('/images/Fondo.png')] 
         bg-fixed bg-no-repeat
         bg-center 

@@ -50,7 +50,7 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted/65 p-6 lg:p-16">
             <div className="relative">
               {tabs.map((tab) => (
                 <TabsContent
@@ -74,12 +74,12 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
                       </a>
                     </Button>
                   </div>
-                  <div className="relative h-[300px] w-full lg:h-[400px]">
+                  <div className="relative h-[300px] w-full lg:h-[400px] flex justify-center items-center ">
                     <a href={tab.content.url} className="">
                       <Image
                         src={tab.content.imageSrc}
                         alt={tab.content.imageAlt}
-                        className="h-full w-full rounded-xl object-center object-contain"
+                        className="h-auto w-auto rounded-xl object-cover"
                         width={400}
                         height={400}
                       />
