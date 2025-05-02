@@ -4,6 +4,7 @@ import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 
+
 export const NavigationSheet = () => {
   return (
     <Sheet>
@@ -14,6 +15,7 @@ export const NavigationSheet = () => {
       </SheetTrigger>
       <SheetContent side="top">
         <Logo />
+        
         <NavMenu orientation="vertical" className="mt-12" />
       </SheetContent>
     </Sheet>

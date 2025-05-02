@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { SunIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { NavUser } from "../dropdownUser";
 
 function SessionOptions({ session }: { session: any }) {
   const router = useRouter();
@@ -22,11 +23,9 @@ function SessionOptions({ session }: { session: any }) {
           <Button onClick={() => router.push("/login")}>Iniciar Sesión</Button>
         </>
       ) : (
-        <Button onClick={() => router.push("/profile")}>Perfil</Button>
+        <NavUser user={session.user} />
       )}
-      <Button size="icon" variant="outline">
-        <SunIcon />
-      </Button>
+      
     </>
   );
 }
