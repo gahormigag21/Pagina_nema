@@ -15,7 +15,7 @@ interface FeatureCardsDivProps {
   features: Feature[];
 }
 
-const FeatureCardsDiv = ({heading, features}: FeatureCardsDivProps) => {
+const FeatureCardsDiv = ({ heading, features }: FeatureCardsDivProps) => {
   return (
     <section className="py-32">
       <div className="container max-w-8xl mx-auto my-0">
@@ -25,7 +25,7 @@ const FeatureCardsDiv = ({heading, features}: FeatureCardsDivProps) => {
             wrapWithLink(
               feature.url,
               <div
-                className="flex flex-col justify-between rounded-lg bg-primary/85 hover:scale-[1.1] child"
+                className="flex flex-col justify-between rounded-lg bg-primary/85 hover:scale-[1.1] transition-transform duration-300 child"
               >
                 <div className="flex justify-between gap-10 border-b ">
                   <div className="flex flex-col justify-between gap-14 py-6 pl-4 md:py-10 md:pl-8 lg:justify-normal">
