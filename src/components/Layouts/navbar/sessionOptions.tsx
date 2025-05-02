@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { NavUser } from "../dropdownUser";
+import { NavUser } from "./dropdownUser";
 
 function SessionOptions({ session }: { session: any }) {
   const router = useRouter();

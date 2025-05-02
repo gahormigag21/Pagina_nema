@@ -22,7 +22,7 @@ async function Navbar02Page() {
             <DarkModeButton /> {/* Placeholder for dark mode toggle */}
             {/* Mobile Menu */}
             <div className="lg:hidden">
-              <NavigationSheet />
+              <NavigationSheet aria-describedby={"Productos y Servicios Nema Ingenieria"}/>
             </div>
           </div>
         </div>

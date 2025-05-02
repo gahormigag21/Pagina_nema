@@ -66,7 +66,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section
-      className="py-16 mb-10 md:py-20 relative z-0
+      className="py-16 mb-10 md:py-20  md:px-10 relative z-0
         bg-[url('/images/Fondo.png')] 
         bg-fixed bg-no-repeat
         bg-center 
@@ -81,7 +81,7 @@ const Hero = ({
         before:-z-1"
     >
       <div className="container mx-auto my-0">
-        <div className="flex flex-col items-center gap-8 md:flex-row">
+        <div className="flex flex-col items-center gap-8 lg:flex-row">
           <div className="flex-1">
             <div className="flex flex-col gap-4 lg:gap-8">
               <h1 className="max-w-[80%] text-4xl leading-tight font-semibold text-foreground lg:text-5xl xl:text-7xl">

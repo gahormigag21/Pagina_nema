@@ -17,10 +17,10 @@ interface FeatureCardsDivProps {
 
 const FeatureCardsDiv = ({ heading, features }: FeatureCardsDivProps) => {
   return (
-    <section className="py-32">
+    <section className="py-16 md:px-10">
       <div className="container max-w-8xl mx-auto my-0">
         <h2 className="text-3xl font-medium lg:text-4xl">{heading}</h2>
-        <div className="mt-20 grid gap-16 lg:grid-cols-2">
+        <div className="mt-20 grid gap-16 xl:grid-cols-2">
           {features.map((feature) =>
             wrapWithLink(
               feature.url,

@@ -29,7 +29,7 @@ interface FeatureProps {
 
 const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
   return (
-    <section className="py-16">
+    <section className="py-16 md:px-10">
       <div className="container mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge variant="outline">{badge}</Badge>

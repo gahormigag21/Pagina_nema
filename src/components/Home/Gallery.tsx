@@ -100,7 +100,7 @@ const Gallery = ({
     }, [carouselApi]);
 
     return (
-        <section className="py-16">
+        <section className="py-16 md:px-10">
             <div className="container mx-auto my-0">
                 <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
                     <div className="flex flex-col gap-4">
@@ -136,7 +136,7 @@ const Gallery = ({
                 </div>
             </div>
             <div className="w-full">
-                <Carousel className="px-40"
+                <Carousel className=" xl:px-40"
                     setApi={setCarouselApi}
                     opts={{
                         breakpoints: {
