@@ -15,13 +15,13 @@ async function Navbar02Page() {
           <div className="flex items-center gap-8">
             <Logo />
             {/* Desktop Menu */}
-            <NavMenu className="hidden md:block" />
+            <NavMenu className="hidden lg:block" />
           </div>
           <div className="flex items-center gap-3">
             <SessionOptions session={session} /> {/* Pass session as prop */}
             <DarkModeButton /> {/* Placeholder for dark mode toggle */}
             {/* Mobile Menu */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <NavigationSheet />
             </div>
           </div>
