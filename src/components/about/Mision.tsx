@@ -1,5 +1,5 @@
-import { MoveRight, Info, Target, Eye } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Info, Target, Eye } from "lucide-react";
+
 
 const Mision = () => {
     return (
