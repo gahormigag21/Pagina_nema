@@ -3,8 +3,8 @@ import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
 import SessionOptions from "./sessionOptions";
 import getSession from "@/utils/getSession";
-import { Button } from "@/components/ui/button";
-import { SunIcon } from "lucide-react";
+import DarkModeButton from "./darkModeButton"; 
+
 async function Navbar02Page() {
   const session = await getSession(); // Fetch session data
 
@@ -19,9 +19,7 @@ async function Navbar02Page() {
           </div>
           <div className="flex items-center gap-3">
             <SessionOptions session={session} /> {/* Pass session as prop */}
-            <Button size="icon" variant="outline">
-              <SunIcon />
-            </Button>
+            <DarkModeButton /> {/* Placeholder for dark mode toggle */}
             {/* Mobile Menu */}
             <div className="md:hidden">
               <NavigationSheet />
