@@ -30,7 +30,7 @@ export const featuresProps = {
         description:
           "Requisitos técnicos relacionados con la composición química e información, que deben cumplir los tubos, ductos y accesorios de acueducto y alcantarillado, los de uso sanitario y los de aguas lluvias, que adquieran las personas prestadoras de los servicios de acueducto y alcantarillado, así como las instalaciones hidrosanitarias al interior de las viviendas.",
         buttonText: "Ver Certificado",
-        imageSrc: "/images/icontec.png",
+        imageSrc: "/images/icontec.webp",
         imageAlt: "placeholder",
         url: "https://www.huelladeconfianza.org/#/Consultar",
       },
