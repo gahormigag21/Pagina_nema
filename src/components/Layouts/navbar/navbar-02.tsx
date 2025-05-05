@@ -9,7 +9,7 @@ async function Navbar02Page() {
   const session = await getSession(); // Fetch session data
 
   return (
-    <div className="lg:fixed top-0 z-90 w-full">
+    <div className="lg:sticky top-0 z-90 w-full">
       <nav className="h-16 bg-background border-b">
         <div className="h-full flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-8">
