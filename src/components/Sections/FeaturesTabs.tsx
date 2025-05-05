@@ -74,17 +74,18 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
                       </a>
                     </Button>
                   </div>
-                  <div className="relative h-[300px] w-full lg:h-[400px] flex justify-center items-center ">
-                    <a href={tab.content.url} className="">
+                  
+                    <a href={tab.content.url} className="relative h-[400px] w-full lg:h-[500px] flex justify-center items-center ">
                       <Image
                         src={tab.content.imageSrc}
                         alt={tab.content.imageAlt}
-                        className="h-auto w-auto rounded-xl object-cover"
+                        className="h-full w-full rounded-xl object-contain"
                         width={400}
                         height={400}
+                        loading="lazy"
                       />
                     </a>
-                  </div>
+                  
                 </TabsContent>
               ))}
             </div>
