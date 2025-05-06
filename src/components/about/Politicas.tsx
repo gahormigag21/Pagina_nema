@@ -16,8 +16,8 @@ const Politicas = () => {
 
       <section className="grid grid-cols-1 gap-8 items-center">
         <div className="space-y-4">
-          <Card className="bg-background">
-            <CardContent>
+          <Card className="bg-background dark:bg-card dark:shadow-md dark:shadow-foreground">
+            <CardContent> 
               <h3 className="text-2xl font-semibold text-center mb-4 pb-5">
                 Política de Calidad
               </h3>
@@ -49,7 +49,7 @@ const Politicas = () => {
 
       <section className="grid grid-cols-1 gap-8 items-center">
         <div className="space-y-4">
-          <Card className="bg-background">
+          <Card className="bg-background dark:bg-card ark:shadow-md dark:shadow-foreground">
             <CardContent>
               <h3 className="text-2xl font-semibold text-center mb-4 pb-5">
                 Política de Protección y Confidencialidad de la Información

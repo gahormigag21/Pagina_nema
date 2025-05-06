@@ -4,12 +4,12 @@ const Mision = () => {
   return (
     <section className="py-32 ">
       <div className="container">
-        <div className="border-6 border-double border-primary shadow-xl/30">
-          <div className="group grid gap-4 overflow-hidden px-6 transition-colors bg-muted duration-500 ease-out hover:bg-background lg:grid-cols-2 xl:px-28">
-            <div className="flex flex-col justify-center gap-4 pt-8 md:pt-16 lg:pb-16 mr-12" >
+        <div className="border-6 border-double border-primary shadow-xl/30 dark:shadow-foreground">
+          <div className="group grid gap-4 overflow-hidden px-6 transition-colors bg-muted duration-500 ease-out hover:bg-background lg:grid-cols-2 xl:px-28 dark:bg-primary/70 dark:hover:bg-background">
+            <div className="flex flex-col justify-center gap-4 pt-8 md:pt-16 lg:pb-16 mr-12">
               <div>
                 <h1 className="text-3xl font-bold text-center flex items-center justify-center gap-2">
-                  <Info className="h-6 w-6 text-primary" />
+                  <Info className="h-6 w-6 text-primary dark:text-accent" />
                   Sobre Nosotros
                 </h1>
                 <p className="mt-4 text-justify">
@@ -37,10 +37,10 @@ const Mision = () => {
           </div>
           <div className="flex border-t border-border">
             <div className="grid lg:grid-cols-2">
-              <div className="group flex flex-col justify-between gap-12 border-border bg-background px-6 py-8 transition-colors duration-500 ease-out hover:bg-background/80 md:py-16 lg:pb-16 xl:gap-16 xl:border-l xl:pl-8">
+              <div className="group flex flex-col justify-between gap-12 border-border bg-background px-6 py-8 transition-colors duration-500 ease-out hover:bg-background/80 dark:hover:bg-primary/40 md:py-16 lg:pb-16 xl:gap-16 xl:border-l xl:pl-8">
                 <div>
                   <h2 className="text-2xl font-semibold text-center flex items-center justify-center gap-2">
-                    <Target className="h-6 w-6 text-primary" />
+                    <Target className="h-6 w-6 text-primary  dark:text-accent" />
                     Misión
                   </h2>
                   <p className="mt-4 text-justify">
@@ -54,10 +54,10 @@ const Mision = () => {
                   </p>
                 </div>
               </div>
-              <div className="group flex flex-col justify-between gap-12 border-t border-border bg-background px-6 py-8 transition-colors duration-500 ease-out hover:bg-background/80 md:py-16 lg:border-t-0 lg:border-l lg:pb-16 xl:gap-16 xl:border-r xl:pl-8">
+              <div className="group flex flex-col justify-between gap-12 border-t border-border bg-background px-6 py-8 transition-colors duration-500 ease-out hover:bg-background/80 dark:hover:bg-primary/40 md:py-16 lg:border-t-0 lg:border-l lg:pb-16 xl:gap-16 xl:border-r xl:pl-8">
                 <div>
                   <h2 className="text-2xl font-semibold text-center flex items-center justify-center gap-2">
-                    <Eye className="h-6 w-6 text-primary" />
+                    <Eye className="h-6 w-6 text-primary dark:text-accent" />
                     Visión
                   </h2>
                   <p className="mt-4 text-justify">

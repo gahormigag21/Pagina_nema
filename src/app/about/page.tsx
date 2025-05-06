@@ -6,7 +6,7 @@ import Valores from "@/components/about/Valores";
 
 function About() {
     return (
-        <div className="bg-linear-to-t/oklch from-secondary/50 from-50% to-primary/30">
+        <div className="bg-linear-to-t/oklch from-secondary/50 from-50% to-primary/30 dark:bg-background dark:bg-none">
             <div className="container mx-auto px-4 py-8 space-y-12 ">
             
                 <Mision />

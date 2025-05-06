@@ -44,7 +44,7 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground data-[state=active]:bg-muted data-[state=active]:text-primary"
+                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground data-[state=active]:bg-muted data-[state=active]:text-primary dark:data-[state=active]:text-foreground dark:data-[state=inactive]:border-primary dark:data-[state=inactive]:border-1 dark:data-[state=inactive]:border-dotted"
               >
                 {tab.icon} {tab.label}
               </TabsTrigger>
@@ -69,23 +69,23 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
                       {tab.content.description}
                     </p>
                     <Button className="mt-2.5 w-fit gap-2" size="lg">
-                      <a href={tab.content.url}>
-                        {tab.content.buttonText}
-                      </a>
+                      <a href={tab.content.url}>{tab.content.buttonText}</a>
                     </Button>
                   </div>
-                  
-                    <a href={tab.content.url} className="relative h-[400px] w-full lg:h-[500px] flex justify-center items-center ">
-                      <Image
-                        src={tab.content.imageSrc}
-                        alt={tab.content.imageAlt}
-                        className="h-full w-full rounded-xl object-contain"
-                        width={400}
-                        height={400}
-                        loading="lazy"
-                      />
-                    </a>
-                  
+
+                  <a
+                    href={tab.content.url}
+                    className="relative h-[400px] w-full lg:h-[500px] flex justify-center items-center "
+                  >
+                    <Image
+                      src={tab.content.imageSrc}
+                      alt={tab.content.imageAlt}
+                      className="h-full w-full rounded-xl object-contain"
+                      width={400}
+                      height={400}
+                      loading="lazy"
+                    />
+                  </a>
                 </TabsContent>
               ))}
             </div>
