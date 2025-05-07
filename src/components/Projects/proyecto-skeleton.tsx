@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export function ProyectoSkeleton() {
     return (
-        <Card className="h-full flex flex-col">
+        <Card className="h-full flex flex-col py-0">
             {/* Skeleton para la imagen */}
             <div className="relative w-full h-48 bg-gray-200 animate-pulse rounded-t-lg" />
 

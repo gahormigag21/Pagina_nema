@@ -112,7 +112,7 @@ export default function ProyectoDetalle({ params }: { params: Promise<{ id: stri
                 </div>
 
                 {/* Descripción larga */}
-                <Card>
+                <Card className="my-16">
                     <CardContent className="pt-6">
                         <div className="prose max-w-none">
                             {proyecto.descripcionLarga.split("\n\n").map((parrafo, index) => (
@@ -125,12 +125,12 @@ export default function ProyectoDetalle({ params }: { params: Promise<{ id: stri
                 </Card>
 
                 {/* Carrusel de imágenes */}
-                <div className="relative w-full h-[400px] md:h-[500px] mb-8 rounded-lg overflow-hidden">
+                <div className="relative w-full h-[400px] md:h-[600px] my-8 rounded-lg overflow-hidden">
                     <Image
                         src={proyecto.imagenes[currentImageIndex] || "/placeholder.svg"}
                         alt={`Imagen ${currentImageIndex + 1} de ${proyecto.nombre}`}
                         fill
-                        className="object-cover"
+                        className="object-scale-down"
                     />
 
                     {/* Controles del carrusel */}

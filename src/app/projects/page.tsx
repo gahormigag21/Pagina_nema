@@ -113,13 +113,15 @@ export default function CatalogoProyectos() {
                 ) : proyectosActuales.length > 0 ? (
                     // Mostrar proyectos cuando están cargados
                     proyectosActuales.map((proyecto) => (
-                        <Card key={proyecto.id} className="h-full flex flex-col">
-                            <div className="relative w-full h-48">
+                        <Card key={proyecto.id} className="h-full flex flex-col py-0">
+                            <div className="relative w-full h-60">
                                 <Image
                                     src={proyecto.imagen || "/placeholder.svg"}
                                     alt={proyecto.nombre}
                                     fill
                                     className="object-cover rounded-t-lg"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority
                                 />
                             </div>
                             <CardHeader>
