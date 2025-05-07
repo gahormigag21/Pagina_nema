@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -22,7 +23,7 @@ export default function CatalogoProyectos() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 1500)
+        }, 500)
 
         return () => clearTimeout(timer)
     }, [])
@@ -57,7 +58,7 @@ export default function CatalogoProyectos() {
     const totalPaginas = Math.ceil(proyectosFiltrados.length / proyectosPorPagina)
 
     // Cambiar de página
-    const irAPagina = (numeroPagina:number) => {
+    const irAPagina = (numeroPagina: number) => {
         setPaginaActual(numeroPagina)
     }
 
@@ -136,8 +137,10 @@ export default function CatalogoProyectos() {
                                 </div>
                             </CardContent>
                             <div className="p-6 pt-0 mt-auto">
-                                <Button variant="outline" className="w-full">
-                                    <Eye className="mr-2 h-4 w-4" /> Ver más
+                                <Button variant="outline" className="w-full" asChild>
+                                    <Link href={`/projects/${proyecto.id}`}>
+                                        <Eye className="mr-2 h-4 w-4" /> Ver más
+                                    </Link>
                                 </Button>
                             </div>
                         </Card>
