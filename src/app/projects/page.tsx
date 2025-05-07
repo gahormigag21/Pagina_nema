@@ -23,7 +23,7 @@ export default function CatalogoProyectos() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 500)
+        }, 250)
 
         return () => clearTimeout(timer)
     }, [])
@@ -33,7 +33,7 @@ export default function CatalogoProyectos() {
         setIsLoading(true)
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 500)
+        }, 250)
 
         return () => clearTimeout(timer)
     }, [busqueda, categoriaSeleccionada, estadoSeleccionado, paginaActual])
