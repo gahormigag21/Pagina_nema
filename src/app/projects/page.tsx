@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Search, ChevronLeft, ChevronRight, Eye } from "lucide-react"
-import { proyectos } from "@/data/proyectos"
+import proyectos from "@/data/proyectos"
 import { ProyectoSkeleton } from "@/components/Projects/proyecto-skeleton"
 
 export default function CatalogoProyectos() {

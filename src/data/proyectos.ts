@@ -7,7 +7,7 @@ export interface Proyecto {
     imagen: string
 }
 
-export const proyectos: Proyecto[] = [
+const proyectos: Proyecto[] = [
     {
         id: 1,
         nombre: "Sistema de Gestión de Inventario",
@@ -105,3 +105,5 @@ export const proyectos: Proyecto[] = [
         imagen: "/placeholder.svg?height=200&width=300",
     },
 ]
+
+export default proyectos;

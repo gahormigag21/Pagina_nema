@@ -4,8 +4,8 @@ import Gallery from "@/components/Home/Gallery";
 import Hero from "@/components/Home/Hero";
 import ContactPage from "@/components/Home/contacto";
 
-import { featuresProps } from "@/components/Home/featuresProps";
-import { servicesProps } from "@/components/Home/servicesProps";
+import { featuresProps } from "@/data/certificados";
+import { servicesProps } from "@/data/servicios";
 
 
 
