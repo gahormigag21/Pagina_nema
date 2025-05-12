@@ -106,7 +106,7 @@ export default function ProyectoDetalle({ params }: { params: Promise<{ id: stri
                             {proyecto.categoria}
                         </span>
                         <span className="inline-flex items-center px-2.5 py-1 rounded-full text-sm font-medium bg-secondary/10 text-secondary">
-                            {proyecto.estado}
+                            {proyecto.status}
                         </span>
                     </div>
                 </div>
@@ -131,6 +131,7 @@ export default function ProyectoDetalle({ params }: { params: Promise<{ id: stri
                         alt={`Imagen ${currentImageIndex + 1} de ${proyecto.nombre}`}
                         fill
                         className="object-scale-down"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
 
                     {/* Controles del carrusel */}
@@ -180,6 +181,7 @@ export default function ProyectoDetalle({ params }: { params: Promise<{ id: stri
                                     alt={`Miniatura ${index + 1}`}
                                     fill
                                     className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
                         ))}

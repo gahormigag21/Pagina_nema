@@ -1,43 +1,44 @@
 export interface Proyecto {
-    id: number
-    nombre: string
-    descripcion: string
-    descripcionLarga: string
-    categoria: string
-    estado: string
-    imagen: string
-    imagenes: string[]
+  id: number;
+  nombre: string;
+  descripcion: string;
+  descripcionLarga: string;
+  categoria: string;
+  status: string | null;
+  imagen: string;
+  imagenes: string[];
 }
 
 const proyectos: Proyecto[] = [
-    {
-        id: 1,
-        nombre: "UNIÓN TEMPORAL MURCON",
-        descripcion: "Construcción de las cámaras de Red matriz dentro del tramo de la Calle 170 a la Calle 193 con AK 9",
-        descripcionLarga: `Contratos de Obra pública para la construcción y/o mejoramiento y/o mantenimiento y/o rehabilitación y/o reconstrucción de la malla vial arterial, intermedia con maquinaria especializada en la ciudad de Bogotá D.C.`,
-        categoria: "Red Matriz",
-        estado: "En progreso",
-        imagen: "/images/projects/murcon/1.jpeg?height=200&width=300",
-        imagenes: [
-            "/images/projects/murcon/1.jpeg?height=600&width=800",
-            "/images/projects/murcon/2.jpeg?height=600&width=800",
-            "/images/projects/murcon/3.jpeg?height=600&width=800",
-            "/images/projects/murcon/4.jpeg?height=600&width=800",
-            "/images/projects/murcon/5.jpeg?height=600&width=800",
-            "/images/projects/murcon/6.jpeg?height=600&width=800",
-            "/images/projects/murcon/7.jpeg?height=600&width=800",
-            "/images/projects/murcon/8.jpeg?height=600&width=800",
-            "/images/projects/murcon/9.jpeg?height=600&width=800",
-            "/images/projects/murcon/10.jpeg?height=600&width=800",
-            "/images/projects/murcon/11.jpeg?height=600&width=800",
-            "/images/projects/murcon/12.jpeg?height=600&width=800",
-        ],
-    },
-    {
-        id: 2,
-        nombre: "Aplicación Móvil de Delivery",
-        descripcion: "App para pedidos y entregas de comida a domicilio",
-        descripcionLarga: `Nuestra aplicación móvil de delivery es una plataforma integral que conecta restaurantes locales con clientes hambrientos, ofreciendo una experiencia de pedido y entrega sin complicaciones.
+  {
+    id: 1,
+    nombre: "UNIÓN TEMPORAL MURCON",
+    descripcion:
+      "Construcción de las cámaras de Red matriz dentro del tramo de la Calle 170 a la Calle 193 con AK 9",
+    descripcionLarga: `Contratos de Obra pública para la construcción y/o mejoramiento y/o mantenimiento y/o rehabilitación y/o reconstrucción de la malla vial arterial, intermedia con maquinaria especializada en la ciudad de Bogotá D.C.`,
+    categoria: "Red Matriz",
+    status: "en progreso",
+    imagen: "/images/projects/murcon/1.jpeg?height=200&width=300",
+    imagenes: [
+      "/images/projects/murcon/1.jpeg?height=600&width=800",
+      "/images/projects/murcon/2.jpeg?height=600&width=800",
+      "/images/projects/murcon/3.jpeg?height=600&width=800",
+      "/images/projects/murcon/4.jpeg?height=600&width=800",
+      "/images/projects/murcon/5.jpeg?height=600&width=800",
+      "/images/projects/murcon/6.jpeg?height=600&width=800",
+      "/images/projects/murcon/7.jpeg?height=600&width=800",
+      "/images/projects/murcon/8.jpeg?height=600&width=800",
+      "/images/projects/murcon/9.jpeg?height=600&width=800",
+      "/images/projects/murcon/10.jpeg?height=600&width=800",
+      "/images/projects/murcon/11.jpeg?height=600&width=800",
+      "/images/projects/murcon/12.jpeg?height=600&width=800",
+    ],
+  },
+  {
+    id: 2,
+    nombre: "Aplicación Móvil de Delivery",
+    descripcion: "App para pedidos y entregas de comida a domicilio",
+    descripcionLarga: `Nuestra aplicación móvil de delivery es una plataforma integral que conecta restaurantes locales con clientes hambrientos, ofreciendo una experiencia de pedido y entrega sin complicaciones.
   
   La aplicación está diseñada pensando tanto en los clientes como en los restaurantes y repartidores, proporcionando interfaces específicas para cada tipo de usuario.
   
@@ -67,21 +68,21 @@ const proyectos: Proyecto[] = [
   - Google Maps API para geolocalización y rutas
   - Stripe para procesamiento de pagos
   - Análisis de datos para recomendaciones personalizadas`,
-        categoria: "Móvil",
-        estado: "En progreso",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Pantalla+Principal",
-            "/placeholder.svg?height=600&width=800&text=Detalle+Restaurante",
-            "/placeholder.svg?height=600&width=800&text=Proceso+de+Pago",
-            "/placeholder.svg?height=600&width=800&text=Seguimiento+Pedido",
-        ],
-    },
-    {
-        id: 3,
-        nombre: "Dashboard Analítico",
-        descripcion: "Panel de control para visualización de datos empresariales",
-        descripcionLarga: `Este dashboard analítico es una herramienta avanzada de visualización de datos diseñada para transformar datos empresariales complejos en insights accionables a través de gráficos interactivos y reportes personalizables.
+    categoria: "Móvil",
+    status: "en progreso",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Pantalla+Principal",
+      "/placeholder.svg?height=600&width=800&text=Detalle+Restaurante",
+      "/placeholder.svg?height=600&width=800&text=Proceso+de+Pago",
+      "/placeholder.svg?height=600&width=800&text=Seguimiento+Pedido",
+    ],
+  },
+  {
+    id: 3,
+    nombre: "Dashboard Analítico",
+    descripcion: "Panel de control para visualización de datos empresariales",
+    descripcionLarga: `Este dashboard analítico es una herramienta avanzada de visualización de datos diseñada para transformar datos empresariales complejos en insights accionables a través de gráficos interactivos y reportes personalizables.
   
   La plataforma permite a los usuarios conectarse a múltiples fuentes de datos, crear visualizaciones personalizadas y compartir informes con equipos, todo desde una interfaz intuitiva y moderna.
   
@@ -105,21 +106,21 @@ const proyectos: Proyecto[] = [
   - Autenticación: OAuth 2.0
   - Almacenamiento: PostgreSQL y Redis
   - Despliegue: Kubernetes en Google Cloud`,
-        categoria: "Web",
-        estado: "Completado",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Panel+Principal",
-            "/placeholder.svg?height=600&width=800&text=Gráficos+Interactivos",
-            "/placeholder.svg?height=600&width=800&text=Reportes+Personalizados",
-            "/placeholder.svg?height=600&width=800&text=Configuración+Alertas",
-        ],
-    },
-    {
-        id: 4,
-        nombre: "Plataforma E-learning",
-        descripcion: "Sistema de aprendizaje en línea con cursos interactivos",
-        descripcionLarga: `Nuestra plataforma de e-learning es un sistema educativo completo diseñado para ofrecer experiencias de aprendizaje interactivas y personalizadas a estudiantes de todos los niveles.
+    categoria: "Web",
+    status: "completado",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Panel+Principal",
+      "/placeholder.svg?height=600&width=800&text=Gráficos+Interactivos",
+      "/placeholder.svg?height=600&width=800&text=Reportes+Personalizados",
+      "/placeholder.svg?height=600&width=800&text=Configuración+Alertas",
+    ],
+  },
+  {
+    id: 4,
+    nombre: "Plataforma E-learning",
+    descripcion: "Sistema de aprendizaje en línea con cursos interactivos",
+    descripcionLarga: `Nuestra plataforma de e-learning es un sistema educativo completo diseñado para ofrecer experiencias de aprendizaje interactivas y personalizadas a estudiantes de todos los niveles.
   
   La plataforma combina contenido multimedia, evaluaciones adaptativas y herramientas de colaboración para crear un entorno de aprendizaje efectivo y atractivo.
   
@@ -149,21 +150,21 @@ const proyectos: Proyecto[] = [
   - Streaming de video: HLS con AWS CloudFront
   - Análisis de aprendizaje: TensorFlow para recomendaciones
   - Autenticación: Auth0 con SSO`,
-        categoria: "Web",
-        estado: "Planificación",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Catálogo+Cursos",
-            "/placeholder.svg?height=600&width=800&text=Lección+Interactiva",
-            "/placeholder.svg?height=600&width=800&text=Panel+Estudiante",
-            "/placeholder.svg?height=600&width=800&text=Creación+Contenido",
-        ],
-    },
-    {
-        id: 5,
-        nombre: "Sistema CRM",
-        descripcion: "Gestión de relaciones con clientes para empresas medianas",
-        descripcionLarga: `Este sistema CRM (Customer Relationship Management) es una solución integral diseñada específicamente para empresas medianas que buscan optimizar sus procesos de ventas, marketing y servicio al cliente.
+    categoria: "Web",
+    status: "planificación",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Catálogo+Cursos",
+      "/placeholder.svg?height=600&width=800&text=Lección+Interactiva",
+      "/placeholder.svg?height=600&width=800&text=Panel+Estudiante",
+      "/placeholder.svg?height=600&width=800&text=Creación+Contenido",
+    ],
+  },
+  {
+    id: 5,
+    nombre: "Sistema CRM",
+    descripcion: "Gestión de relaciones con clientes para empresas medianas",
+    descripcionLarga: `Este sistema CRM (Customer Relationship Management) es una solución integral diseñada específicamente para empresas medianas que buscan optimizar sus procesos de ventas, marketing y servicio al cliente.
   
   La plataforma centraliza toda la información de clientes y prospectos, automatiza tareas repetitivas y proporciona análisis detallados para mejorar la toma de decisiones.
   
@@ -193,21 +194,22 @@ const proyectos: Proyecto[] = [
   - Búsqueda: Elasticsearch
   - Análisis predictivo: Python con scikit-learn
   - Despliegue: Contenedores Docker en Azure`,
-        categoria: "Web",
-        estado: "En progreso",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Dashboard+CRM",
-            "/placeholder.svg?height=600&width=800&text=Pipeline+Ventas",
-            "/placeholder.svg?height=600&width=800&text=Perfil+Cliente",
-            "/placeholder.svg?height=600&width=800&text=Reportes+Analíticos",
-        ],
-    },
-    {
-        id: 6,
-        nombre: "App de Fitness",
-        descripcion: "Aplicación para seguimiento de rutinas de ejercicio y nutrición",
-        descripcionLarga: `Nuestra aplicación de fitness es una solución completa para el bienestar que combina seguimiento de ejercicios, planificación nutricional y análisis de progreso en una experiencia móvil intuitiva y motivadora.
+    categoria: "Web",
+    status: "en progreso",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Dashboard+CRM",
+      "/placeholder.svg?height=600&width=800&text=Pipeline+Ventas",
+      "/placeholder.svg?height=600&width=800&text=Perfil+Cliente",
+      "/placeholder.svg?height=600&width=800&text=Reportes+Analíticos",
+    ],
+  },
+  {
+    id: 6,
+    nombre: "App de Fitness",
+    descripcion:
+      "Aplicación para seguimiento de rutinas de ejercicio y nutrición",
+    descripcionLarga: `Nuestra aplicación de fitness es una solución completa para el bienestar que combina seguimiento de ejercicios, planificación nutricional y análisis de progreso en una experiencia móvil intuitiva y motivadora.
   
   Diseñada tanto para principiantes como para atletas avanzados, la aplicación ofrece planes personalizados basados en objetivos individuales y preferencias del usuario.
   
@@ -240,21 +242,21 @@ const proyectos: Proyecto[] = [
   - TensorFlow Lite para reconocimiento de ejercicios
   - HealthKit y Google Fit para integración con datos de salud
   - Stripe para suscripciones premium`,
-        categoria: "Móvil",
-        estado: "Completado",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Pantalla+Principal",
-            "/placeholder.svg?height=600&width=800&text=Ejercicio+Detallado",
-            "/placeholder.svg?height=600&width=800&text=Seguimiento+Nutricional",
-            "/placeholder.svg?height=600&width=800&text=Análisis+Progreso",
-        ],
-    },
-    {
-        id: 7,
-        nombre: "Plataforma IoT",
-        descripcion: "Sistema para conectar y gestionar dispositivos inteligentes",
-        descripcionLarga: `Esta plataforma IoT (Internet of Things) es una solución empresarial escalable diseñada para conectar, monitorear y gestionar miles de dispositivos inteligentes desde una interfaz centralizada y segura.
+    categoria: "Móvil",
+    status: "completado",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Pantalla+Principal",
+      "/placeholder.svg?height=600&width=800&text=Ejercicio+Detallado",
+      "/placeholder.svg?height=600&width=800&text=Seguimiento+Nutricional",
+      "/placeholder.svg?height=600&width=800&text=Análisis+Progreso",
+    ],
+  },
+  {
+    id: 7,
+    nombre: "Plataforma IoT",
+    descripcion: "Sistema para conectar y gestionar dispositivos inteligentes",
+    descripcionLarga: `Esta plataforma IoT (Internet of Things) es una solución empresarial escalable diseñada para conectar, monitorear y gestionar miles de dispositivos inteligentes desde una interfaz centralizada y segura.
   
   La plataforma proporciona todas las herramientas necesarias para implementar soluciones IoT completas, desde la integración de dispositivos hasta el análisis avanzado de datos y la automatización de procesos.
   
@@ -291,21 +293,21 @@ const proyectos: Proyecto[] = [
   - Frontend: React con Grafana para visualizaciones
   - Infraestructura: Kubernetes en múltiples nubes
   - Edge computing: Docker en dispositivos de borde`,
-        categoria: "IoT",
-        estado: "En progreso",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Dashboard+Dispositivos",
-            "/placeholder.svg?height=600&width=800&text=Análisis+Datos+IoT",
-            "/placeholder.svg?height=600&width=800&text=Mapa+Dispositivos",
-            "/placeholder.svg?height=600&width=800&text=Configuración+Reglas",
-        ],
-    },
-    {
-        id: 8,
-        nombre: "Portal de Noticias",
-        descripcion: "Sitio web de noticias con sistema de gestión de contenidos",
-        descripcionLarga: `Este portal de noticias es una plataforma digital completa que combina un sistema de gestión de contenidos (CMS) potente con una experiencia de usuario moderna y atractiva para la publicación y consumo de noticias.
+    categoria: "IoT",
+    status: "en progreso",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Dashboard+Dispositivos",
+      "/placeholder.svg?height=600&width=800&text=Análisis+Datos+IoT",
+      "/placeholder.svg?height=600&width=800&text=Mapa+Dispositivos",
+      "/placeholder.svg?height=600&width=800&text=Configuración+Reglas",
+    ],
+  },
+  {
+    id: 8,
+    nombre: "Portal de Noticias",
+    descripcion: "Sitio web de noticias con sistema de gestión de contenidos",
+    descripcionLarga: `Este portal de noticias es una plataforma digital completa que combina un sistema de gestión de contenidos (CMS) potente con una experiencia de usuario moderna y atractiva para la publicación y consumo de noticias.
   
   Diseñado para organizaciones mediáticas de todos los tamaños, el portal ofrece herramientas avanzadas para la creación, publicación y monetización de contenido informativo.
   
@@ -343,21 +345,21 @@ const proyectos: Proyecto[] = [
   - CDN: Cloudflare para distribución global
   - Análisis: Google Analytics y Chartbeat
   - Infraestructura: Vercel y AWS`,
-        categoria: "Web",
-        estado: "Completado",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Portada+Principal",
-            "/placeholder.svg?height=600&width=800&text=Artículo+Detallado",
-            "/placeholder.svg?height=600&width=800&text=Panel+Editor",
-            "/placeholder.svg?height=600&width=800&text=Análisis+Audiencia",
-        ],
-    },
-    {
-        id: 9,
-        nombre: "Aplicación de Finanzas Personales",
-        descripcion: "Herramienta para gestión de presupuestos y gastos personales",
-        descripcionLarga: `Esta aplicación de finanzas personales es una herramienta integral diseñada para ayudar a los usuarios a tomar el control de su vida financiera a través del seguimiento de gastos, presupuestos personalizados y análisis financiero intuitivo.
+    categoria: "Web",
+    status: "completado",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Portada+Principal",
+      "/placeholder.svg?height=600&width=800&text=Artículo+Detallado",
+      "/placeholder.svg?height=600&width=800&text=Panel+Editor",
+      "/placeholder.svg?height=600&width=800&text=Análisis+Audiencia",
+    ],
+  },
+  {
+    id: 9,
+    nombre: "Aplicación de Finanzas Personales",
+    descripcion: "Herramienta para gestión de presupuestos y gastos personales",
+    descripcionLarga: `Esta aplicación de finanzas personales es una herramienta integral diseñada para ayudar a los usuarios a tomar el control de su vida financiera a través del seguimiento de gastos, presupuestos personalizados y análisis financiero intuitivo.
   
   La aplicación simplifica la gestión financiera personal con automatización inteligente y visualizaciones claras que ayudan a los usuarios a entender y mejorar sus hábitos financieros.
   
@@ -394,21 +396,21 @@ const proyectos: Proyecto[] = [
   - Plaid para conexiones bancarias seguras
   - TensorFlow para categorización inteligente
   - AWS para infraestructura segura y escalable`,
-        categoria: "Móvil",
-        estado: "Planificación",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Dashboard+Financiero",
-            "/placeholder.svg?height=600&width=800&text=Análisis+Gastos",
-            "/placeholder.svg?height=600&width=800&text=Presupuestos",
-            "/placeholder.svg?height=600&width=800&text=Objetivos+Ahorro",
-        ],
-    },
-    {
-        id: 10,
-        nombre: "Sistema de Reservas",
-        descripcion: "Plataforma para gestión de reservas de servicios",
-        descripcionLarga: `Este sistema de reservas es una plataforma versátil diseñada para gestionar citas, reservas y programación de recursos para diversos tipos de negocios, desde restaurantes y hoteles hasta clínicas médicas y salones de belleza.
+    categoria: "Móvil",
+    status: "planificación",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Dashboard+Financiero",
+      "/placeholder.svg?height=600&width=800&text=Análisis+Gastos",
+      "/placeholder.svg?height=600&width=800&text=Presupuestos",
+      "/placeholder.svg?height=600&width=800&text=Objetivos+Ahorro",
+    ],
+  },
+  {
+    id: 10,
+    nombre: "Sistema de Reservas",
+    descripcion: "Plataforma para gestión de reservas de servicios",
+    descripcionLarga: `Este sistema de reservas es una plataforma versátil diseñada para gestionar citas, reservas y programación de recursos para diversos tipos de negocios, desde restaurantes y hoteles hasta clínicas médicas y salones de belleza.
   
   La solución ofrece una experiencia fluida tanto para los clientes que realizan reservas como para los negocios que gestionan su disponibilidad y recursos.
   
@@ -448,21 +450,21 @@ const proyectos: Proyecto[] = [
   - Pagos: Stripe y PayPal
   - Calendarios: API de Google Calendar
   - Despliegue: AWS con balanceo de carga`,
-        categoria: "Web",
-        estado: "Completado",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Calendario+Reservas",
-            "/placeholder.svg?height=600&width=800&text=Proceso+Reserva",
-            "/placeholder.svg?height=600&width=800&text=Panel+Administración",
-            "/placeholder.svg?height=600&width=800&text=Reportes+Ocupación",
-        ],
-    },
-    {
-        id: 11,
-        nombre: "Juego Educativo",
-        descripcion: "Juego interactivo para aprendizaje de matemáticas",
-        descripcionLarga: `Este juego educativo es una experiencia interactiva diseñada para hacer que el aprendizaje de las matemáticas sea divertido y atractivo para estudiantes de primaria, combinando mecánicas de juego envolventes con contenido educativo alineado con los estándares curriculares.
+    categoria: "Web",
+    status: "completado",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Calendario+Reservas",
+      "/placeholder.svg?height=600&width=800&text=Proceso+Reserva",
+      "/placeholder.svg?height=600&width=800&text=Panel+Administración",
+      "/placeholder.svg?height=600&width=800&text=Reportes+Ocupación",
+    ],
+  },
+  {
+    id: 11,
+    nombre: "Juego Educativo",
+    descripcion: "Juego interactivo para aprendizaje de matemáticas",
+    descripcionLarga: `Este juego educativo es una experiencia interactiva diseñada para hacer que el aprendizaje de las matemáticas sea divertido y atractivo para estudiantes de primaria, combinando mecánicas de juego envolventes con contenido educativo alineado con los estándares curriculares.
   
   El juego utiliza narrativas cautivadoras, personajes memorables y sistemas de progresión para motivar a los estudiantes a practicar y dominar conceptos matemáticos fundamentales.
   
@@ -502,21 +504,21 @@ const proyectos: Proyecto[] = [
   - Modelado 3D con Blender
   - Animaciones con Spine
   - Efectos visuales con Shader Graph`,
-        categoria: "Juego",
-        estado: "En progreso",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Mundo+Juego",
-            "/placeholder.svg?height=600&width=800&text=Desafío+Matemático",
-            "/placeholder.svg?height=600&width=800&text=Personalización+Avatar",
-            "/placeholder.svg?height=600&width=800&text=Mapa+Progreso",
-        ],
-    },
-    {
-        id: 12,
-        nombre: "Red Social Especializada",
-        descripcion: "Plataforma social para profesionales del sector creativo",
-        descripcionLarga: `Esta red social especializada es una plataforma exclusiva diseñada para conectar profesionales del sector creativo, incluyendo diseñadores, ilustradores, fotógrafos, cineastas, escritores y otros artistas digitales.
+    categoria: "Juego",
+    status: "en progreso",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Mundo+Juego",
+      "/placeholder.svg?height=600&width=800&text=Desafío+Matemático",
+      "/placeholder.svg?height=600&width=800&text=Personalización+Avatar",
+      "/placeholder.svg?height=600&width=800&text=Mapa+Progreso",
+    ],
+  },
+  {
+    id: 12,
+    nombre: "Red Social Especializada",
+    descripcion: "Plataforma social para profesionales del sector creativo",
+    descripcionLarga: `Esta red social especializada es una plataforma exclusiva diseñada para conectar profesionales del sector creativo, incluyendo diseñadores, ilustradores, fotógrafos, cineastas, escritores y otros artistas digitales.
   
   A diferencia de las redes sociales generalistas, esta plataforma está optimizada para mostrar portfolios creativos, facilitar colaboraciones profesionales y crear oportunidades de negocio dentro de la industria creativa.
   
@@ -555,16 +557,16 @@ const proyectos: Proyecto[] = [
   - Streaming: WebRTC para eventos en vivo
   - Búsqueda: Elasticsearch con reconocimiento visual
   - IA: Recomendaciones personalizadas con TensorFlow`,
-        categoria: "Web",
-        estado: "Planificación",
-        imagen: "/placeholder.svg?height=200&width=300",
-        imagenes: [
-            "/placeholder.svg?height=600&width=800&text=Feed+Creativo",
-            "/placeholder.svg?height=600&width=800&text=Perfil+Portfolio",
-            "/placeholder.svg?height=600&width=800&text=Colaboración+Proyecto",
-            "/placeholder.svg?height=600&width=800&text=Marketplace+Creativo",
-        ],
-    },
-]
+    categoria: "Web",
+    status: "planificación",
+    imagen: "/placeholder.svg?height=200&width=300",
+    imagenes: [
+      "/placeholder.svg?height=600&width=800&text=Feed+Creativo",
+      "/placeholder.svg?height=600&width=800&text=Perfil+Portfolio",
+      "/placeholder.svg?height=600&width=800&text=Colaboración+Proyecto",
+      "/placeholder.svg?height=600&width=800&text=Marketplace+Creativo",
+    ],
+  },
+];
 
 export default proyectos;
