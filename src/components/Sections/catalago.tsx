@@ -104,10 +104,12 @@ export default function Catalogo({
           </div>
 
           <Select
+          
             value={categoriaSeleccionada}
             onValueChange={setCategoriaSeleccionada}
+            
           >
-            <SelectTrigger>
+            <SelectTrigger className="w-auto">
               <SelectValue placeholder="Filtrar por categoría" />
             </SelectTrigger>
             <SelectContent>
@@ -125,7 +127,7 @@ export default function Catalogo({
               value={estadoSeleccionado}
               onValueChange={setEstadoSeleccionado}
             >
-              <SelectTrigger>
+              <SelectTrigger className="w-auto">
                 <SelectValue placeholder="Filtrar por estado" />
               </SelectTrigger>
               <SelectContent>
@@ -163,7 +165,7 @@ export default function Catalogo({
               <CardContent className="flex-grow">
                 <p className="text-muted-foreground">{item.descripcion}</p>
                 <div className="flex gap-2 mt-4">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 dark:bg-foreground/85 text-primary">
                     {item.categoria}
                   </span>
                   {/* Mostrar el estado solo si tiene uno */}
