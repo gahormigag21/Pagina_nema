@@ -21,7 +21,7 @@ type Item = {
   nombre: string;
   descripcion: string;
   categoria: string;
-  status: string | null; // El estado puede ser null
+  status: string ; 
   imagen?: string;
 };
 
@@ -31,6 +31,7 @@ type Props = {
   mostrarFiltros?: boolean;
   linkBase?: string;
   categorias: string[]; // 🔥 requerido para poder filtrar
+  estados: string[]; // 🔥 requerido para poder filtrar
   itemsPorPagina?: number;
 };
 
@@ -40,6 +41,7 @@ export default function Catalogo({
   mostrarFiltros = true,
   linkBase = "/items",
   categorias,
+  estados, // Pass estados as a prop
   itemsPorPagina = 6,
 }: Props) {
   const [busqueda, setBusqueda] = useState("");
@@ -82,8 +84,7 @@ export default function Catalogo({
 
   const irAPagina = (numero: number) => setPaginaActual(numero);
   // Verificar si existe al menos un estado para mostrar el filtro
-  const tieneEstado = items.some((item) => item.status !== null);
-
+  const tieneEstado = estados && estados.length > 0; 
   return (
     <div className="container mx-auto py-8 px-4">
       {titulo && (
@@ -104,10 +105,8 @@ export default function Catalogo({
           </div>
 
           <Select
-          
             value={categoriaSeleccionada}
             onValueChange={setCategoriaSeleccionada}
-            
           >
             <SelectTrigger className="w-auto">
               <SelectValue placeholder="Filtrar por categoría" />
@@ -132,9 +131,11 @@ export default function Catalogo({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">Todos los estados</SelectItem>
-                <SelectItem value="completado">Completado</SelectItem>
-                <SelectItem value="en progreso">En progreso</SelectItem>
-                <SelectItem value="pendiente">Pendiente</SelectItem>
+                {estados.map((est) => (
+                  <SelectItem key={est} value={est}>
+                    {est}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
@@ -168,9 +169,19 @@ export default function Catalogo({
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 dark:bg-foreground/85 text-primary">
                     {item.categoria}
                   </span>
-                  {/* Mostrar el estado solo si tiene uno */}
+                  {/* Mostrar el estado con estilos condicionales */}
                   {item.status && (
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">
+                    <span
+                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                        item.status === "en progreso"
+                          ? "bg-[#A7A9F1] text-primary"
+                          : item.status === "completado"
+                          ? "bg-green-300 text-green-900"
+                          : item.status === "cancelado"
+                          ? "bg-red-300 text-red-900"
+                          : "bg-muted-foreground/30 text-muted-foreground"
+                      }`}
+                    >
                       {item.status}
                     </span>
                   )}

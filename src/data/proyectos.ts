@@ -4,7 +4,7 @@ export interface Proyecto {
   descripcion: string;
   descripcionLarga: string;
   categoria: string;
-  status: string | null;
+  status: string ;
   imagen: string;
   imagenes: string[];
 }
@@ -107,7 +107,7 @@ const proyectos: Proyecto[] = [
   - Almacenamiento: PostgreSQL y Redis
   - Despliegue: Kubernetes en Google Cloud`,
     categoria: "Web",
-    status: "completado",
+    status: "cancelado",
     imagen: "/placeholder.svg?height=200&width=300",
     imagenes: [
       "/placeholder.svg?height=600&width=800&text=Panel+Principal",
