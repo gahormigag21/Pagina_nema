@@ -11,9 +11,9 @@ import Link from "next/link";
 const ContactPage = () => (
   <div
     id="contacto"
-    className="min-h-screen flex items-center justify-center py-16"
+    className="min-h-screen flex items-center justify-center py-10 mt-16 bg-tetris before:bg-secondary/90 relative"
   >
-    <div className="w-full max-w-screen-xl mx-auto px-6 xl:px-0">
+    <div className="w-full max-w-screen-xl mx-auto px-6 xl:px-0 z-1">
       <b className="text-muted-foreground">Contactanos</b>
       <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
         Hablemos de tu próximo proyecto

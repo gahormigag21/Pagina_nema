@@ -47,10 +47,10 @@
   --radius: 1rem;
 
   --background: oklch(0.99 0.005 270); /* blanco #fafcff */
-  --foreground: oklch(0.11 0.0387 278.09);  /* casi negro #090a34 */
+  --foreground: oklch(0.11 0.0387 278.09); /* casi negro #090a34 */
 
   --card: oklch(0.95 0.0188 282.77); /* Azull claro #EDEEFC */
-  --card-foreground:  oklch(0.18 0.0801 273.85);/* Negro 030312 */
+  --card-foreground: oklch(0.18 0.0801 273.85); /* Negro 030312 */
 
   --popover: oklch(0.95 0.0188 282.77);
   --popover-foreground: oklch(0.11 0.0387 278.09);
@@ -73,7 +73,7 @@
   --input: oklch(0.94 0.01 267.36);
   --ring: oklch(0.29 0.1597 270.1); /* azul primario */
 
-  --chart-1: oklch(0.7 0.22 60);  /* naranja suave */
+  --chart-1: oklch(0.7 0.22 60); /* naranja suave */
   --chart-2: oklch(0.5 0.12 200); /* azul medio */
   --chart-3: oklch(0.6 0.15 280); /* lavanda */
   --chart-4: oklch(0.75 0.18 100); /* mostaza */
@@ -122,7 +122,7 @@
   --chart-4: oklch(0.6 0.2 100);
   --chart-5: oklch(0.55 0.16 300);
 
-  --sidebar: oklch(0.18 0.0801 273.85);;
+  --sidebar: oklch(0.18 0.0801 273.85);
   --sidebar-foreground: ooklch(0.99 0.0045 258.32);
   --sidebar-primary: oklch(0.4 0.2322 268.71);
   --sidebar-primary-foreground: (0.99 0.0045 258.32);
@@ -132,8 +132,6 @@
   --sidebar-ring: oklch(0.45 0.2 268);
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -141,4 +139,50 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+/* Texture backgrounds */
+.bg-tetris {
+  --sz: 10px;
+  --c1: #5abfff; /* azul claro, equivalente a #5acf5f */
+  --c2: #3f9eff; /* azul medio, equivalente a #4CAF50 */
+  --c3: #141679; /* azul profundo, ya definido por ti */
+  --c4: #090A34; /* azul muy oscuro, equivalente a #265628 */
+  --ts: 50% / calc(var(--sz) * 10.5) calc(var(--sz) * 12.2);
+  overflow: hidden;
+  background: conic-gradient(
+        from 180deg at 100% 83.335%,
+        var(--c3) 0 60deg,
+        #fff0 0 360deg
+      )
+      var(--ts),
+    conic-gradient(
+        from 120deg at 66.66% 66.66%,
+        var(--c1) 0 120deg,
+        #fff0 0 360deg
+      )
+      var(--ts),
+    conic-gradient(
+        from 60deg at 66.66% 33.33%,
+        var(--c2) 0 60deg,
+        var(--c4) 0 120deg,
+        #fff0 0 360deg
+      )
+      var(--ts),
+    conic-gradient(
+        from -60deg at 33% 16.665%,
+        var(--c1) 0 120deg,
+        var(--c3) 0 240deg,
+        var(--c4) 0 360deg
+      )
+      var(--ts),
+    var(--c2);
+}
+.bg-tetris::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }

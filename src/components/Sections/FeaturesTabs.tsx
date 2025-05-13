@@ -50,7 +50,7 @@ const Feature = ({ badge, heading, description, tabs }: FeatureProps) => {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted/65 p-6 lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted/65 p-6 lg:p-16 bg-tetris before:bg-muted/95 relative dark:before:bg-black/80">
             <div className="relative">
               {tabs.map((tab) => (
                 <TabsContent
