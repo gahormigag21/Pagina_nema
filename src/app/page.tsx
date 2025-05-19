@@ -6,6 +6,7 @@ import ContactPage from "@/components/Home/contacto";
 
 import { featuresProps } from "@/data/certificados";
 import { servicesProps } from "@/data/servicios";
+import LogosClientes from "@/components/logos-07/logosClientes";
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Gallery />
       <Features {...featuresProps} />
       <ContactPage />
+      <LogosClientes />
 
     </div>
   );

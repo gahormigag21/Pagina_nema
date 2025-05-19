@@ -11,7 +11,7 @@ import Link from "next/link";
 const ContactPage = () => (
   <div
     id="contacto"
-    className="min-h-screen flex items-center justify-center py-10 mt-16 bg-cubes before:bg-secondary/90 before:mix-blend-screen relative"
+    className="min-h-[900px] max-h-screen flex items-center justify-center py-10 mt-16 "
   >
     <div className="w-full max-w-screen-xl mx-auto px-6 xl:px-0 z-1">
       <b className="text-muted-foreground">Contactanos</b>
@@ -99,8 +99,8 @@ const ContactPage = () => (
         </div>
 
         {/* Form */}
-        <Card className="bg-primary dark:bg-card shadow-none max-h-[508px]">
-          <CardContent className="p-6 md:p-10">
+        <Card className="dark:before:bg-slate-900/80 border-none shadow-none max-h-[508px] bg-cubes before:bg-primary/30 relative">
+          <CardContent className="p-6 md:p-10 z-1 my-auto">
             <form className="text-secondary dark:text-foreground">
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-5">
                 <div className="col-span-2 sm:col-span-1">
